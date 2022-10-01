@@ -52,7 +52,7 @@ export default function App() {
   };
 
   const handleChange = evt => {
-    const { name, value } = evt.target;
+    const { value } = evt.target;
     setFilter(value);
   };
 
