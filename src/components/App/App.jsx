@@ -18,12 +18,6 @@ export default function App() {
     localStorage.setItem('contacts', JSON.stringify(contacts));
   }, [contacts]);
 
-  useEffect(() => {
-    return () => {
-      localStorage.removeItem('contacts');
-    };
-  }, []);
-
   const addContacts = contact => {
     if (isDuplicate(contact)) {
       return alert(`${contact.name} - is already on the site`);
